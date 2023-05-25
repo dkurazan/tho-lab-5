@@ -227,6 +227,13 @@ main {
     text-decoration: underline;
 }
 
+.pib {
+    padding: 50px 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
 @media screen and (max-width: 1300px) {
     .header__wrapper {
         justify-content: space-between;
@@ -262,5 +269,9 @@ main {
     .footer__block:last-of-type {
         justify-content: start;
         align-items: center;
+    }
+
+    .pib {
+        font-size: 25px;
     }
 }
