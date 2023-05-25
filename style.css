@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: #DBDBDB;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: opacity .3s ease, color .3s ease;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header__wrapper > .logo {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    
+}
+
+.header__wrapper > .logo > .logo__inner {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.header__wrapper > .logo > .logo__inner:hover {
+    opacity: .4;
+}
+
+.header__wrapper > .menu {
+    display: flex;
+    flex: 0 0 66.777;
+    max-width: 66.777%;
+    gap: 40px;
+}
+
+.header__wrapper > .menu > a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    transition: opacity .3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header__wrapper > .menu > a:hover {
+    opacity: .4;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 85px;
+    right: -100%;
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+    transition: right .5s ease;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.mobile-menu__wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    height: 100%;
+
+}
+
+.burger-menu__wrapper {
+    position: relative;
+}
+
+.burger-menu__wrapper.active .button-base {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.burger-menu__wrapper.active span:first-of-type {
+    top: 0;
+    rotate: 45deg;
+}
+
+.burger-menu__wrapper.active span:last-of-type {
+    top: 0;
+    rotate: -45deg;
+}
+
+.burger-menu__wrapper span {
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: #000;
+    transition: rotate .5s ease, visibility .5s ease, opacity .5s ease;
+}
+
+.burger-menu__wrapper span:first-of-type {
+    top: 7px;
+    position: absolute;
+}
+
+.burger-menu__wrapper span:last-of-type {
+    top: -7px;
+    position: absolute;
+
+}
+
+main {
+    margin-top: 85px;
+}
+
+.section {
+    height: calc( 100vh - 85px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    font-weight: 700;
+    scroll-margin-top: 85px;
+}
+
+.hero-section {
+    background-color: burlywood;
+    color: #ffeed9;
+}
+
+.third-section {
+    background-color: cornsilk;
+    color: #525151;
+    
+}
+
+.footer {
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+}
+
+.footer__block:first-child {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.footer__logo {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.footer__logo:hover {
+    color: #c4c4c4;
+}
+
+.footer__text {
+    max-width: 500px;
+}
+
+.footer__text .text {
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__block:last-of-type {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer__nav a {
+    color: #fff;
+    font-size: 25px;
+}
+
+.footer__nav a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+    .header__wrapper {
+        justify-content: space-between;
+    }
+
+    .header__wrapper > .logo, .header__wrapper > .menu {
+        flex: 0 0 fit-content;
+        max-width: fit-content;
+        
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header__wrapper > .menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer__block:last-of-type {
+        justify-content: start;
+        align-items: center;
+    }
+}

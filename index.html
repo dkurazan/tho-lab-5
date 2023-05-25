@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Lab 5</title>
 </head>
 <body>
-    <header class="header"></header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="logo">
+                <a href="/" class="logo__inner">
+                    Logo
+                </a>
+            </div>
+            <nav class="menu">
+                <a href="#">Hero section</a>
+                <a href="#second-section">Second section</a>
+                <a href="#third-section">Third section</a>
+                <a href="#contact-us-section">Contact us</a>
+            </nav>
+            <div class="burger-menu">
+                <div class="burger-menu__wrapper" openMobileMenu>
+                    <span></span>
+                    <span class="button-base"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" mobileMenu>
+            <div class="mobile-menu__wrapper">
+                <a href="#">Hero section</a>
+                <a href="#second-section">Second section</a>
+                <a href="#third-section">Third section</a>
+                <a href="#contact-us-section">Contact us</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__wrapper">
+            <section class="hero-section section" id="hero-section">Hero section</section>
+            <section class="second-section section" id="second-section">Second section</section>
+            <section class="third-section section" id="third-section">Third section</section>
+            <section class="contact-us-section section" id="contact-us-section">Contact us</section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block">
+                <a href="/" class="footer__logo">
+                    Logo
+                </a>
+                <div class="footer__text">
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore placeat vitae ut quisquam a, porro tempore repellendus, velit at similique iure blanditiis eligendi? Officiis minima deserunt, accusamus nesciunt nihil tenetur!
+                    </p>
+                </div>
+            </div>
+            <div class="footer__block">
+                <nav class="footer__nav">
+                    <a href="">Terms of Services</a>
+                    <a href="">Terms & Conditions</a>
+                    <a href="">Return policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
